@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign Issue
-        uses: actions-ecosystem/action-assign@v2
+        uses: andymckay/assign@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: Ogieriakhi17
