@@ -1,4 +1,5 @@
-name: Assign Issues
+name: Auto Assign Issues
+
 on:
   issues:
     types: [opened]
@@ -6,9 +7,10 @@ on:
 jobs:
   assign_issue:
     runs-on: ubuntu-latest
+
     steps:
       - name: Assign Issue
-        uses: andymckay/assign@v2
+        uses: actions-ecosystem/action-assign@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: Ogieriakhi17
